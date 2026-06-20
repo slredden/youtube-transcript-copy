@@ -46,7 +46,6 @@ superseded first approach).
 ## Not in v1 (easy follow-ups)
 
 - Language picker / timestamp toggle / `.md` output
-- A real toolbar icon (Chrome shows a default placeholder until one is added)
 - Chrome Web Store packaging
 
 ## Limitations
