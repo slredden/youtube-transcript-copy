@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      width: 260px;
+      margin: 0;
+      padding: 14px;
+      font: 13px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+    h1 {
+      font-size: 13px;
+      font-weight: 600;
+      margin: 0 0 10px;
+    }
+    .buttons { display: flex; gap: 8px; }
+    button {
+      flex: 1;
+      padding: 8px 10px;
+      font: inherit;
+      font-weight: 600;
+      border: 1px solid rgba(128, 128, 128, 0.4);
+      border-radius: 8px;
+      background: rgba(128, 128, 128, 0.08);
+      cursor: pointer;
+    }
+    button:hover:not(:disabled) { background: rgba(128, 128, 128, 0.18); }
+    button:disabled { opacity: 0.45; cursor: default; }
+    #status {
+      margin-top: 10px;
+      min-height: 1.4em;
+      color: rgba(128, 128, 128, 0.95);
+    }
+    #status.error { color: #d93025; }
+    #status.ok { color: #1a7f37; }
+    #detail {
+      margin-top: 6px;
+      font-size: 10px;
+      line-height: 1.3;
+      color: rgba(128, 128, 128, 0.7);
+      word-break: break-word;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>YouTube Transcript Copy</h1>
+  <div class="buttons">
+    <button id="copy" disabled>Copy transcript</button>
+    <button id="save" disabled>Save as .txt</button>
+  </div>
+  <div id="status">Reading transcript…</div>
+  <div id="detail"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
